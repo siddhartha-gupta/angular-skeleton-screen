@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'spinner.scss';
+@import 'skeleton.scss';
+
+h3, h4, p {
+    margin: 0 0 5px;
+}
+
+.card-layout {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}

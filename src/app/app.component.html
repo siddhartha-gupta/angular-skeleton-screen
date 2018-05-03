@@ -1,0 +1,36 @@
+<div style="text-align:center">
+  <h1>
+    <!-- Loader screen -->
+    Skeleton Screen
+  </h1>
+</div>
+<div *ngIf="users.length > 0">
+  <div *ngFor="let user of users" class="card-layout">
+    <h3>Name: {{user.name}}</h3>
+    <h4>Email: {{user.email}}</h4>
+    <p>Company: {{user.country}}</p>
+  </div>
+</div>
+<!-- <div *ngIf="users.length === 0" class="loader-wrapper">
+  <div class="lds-default">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div> -->
+<div *ngIf="users.length === 0" class="skeleton">
+  <div *ngFor="let fake of generateFake(4)" class="card-layout">
+    <h3></h3>
+    <h4></h4>
+    <p></p>
+  </div>
+</div>
