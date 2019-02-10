@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/delay';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/internal/operators';
 
 @Injectable()
 export class UserService {
@@ -28,6 +27,6 @@ export class UserService {
       country: 'UK'
     }];
 
-    return Observable.of(fakeResponse).delay(5000);
+    return of(fakeResponse).pipe(delay(5000));
   }
 }
